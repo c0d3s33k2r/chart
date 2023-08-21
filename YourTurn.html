@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.min.js" integrity="sha512-asxKqQghC1oBShyhiBwA+YgotaSYKxGP1rcSYTDrB0U6DxwlJjU59B67U8+5/++uFjcuVM8Hh5cokLjZlhm3Vg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div style="width: 1500px">
+    <canvas id="myChart"></canvas>
+</div>
+<script>
+    var ctx = document.getElementById('myChart');
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Christmas', 'Halloween', 'Easter', 'Thanksgiving', 'New Years'],
+            datasets: [{
+                label: '# of Votes',
+                data: [9, 7, 2, 2, 1],
+                backgroundColor: [
+                    'rgba(234, 255, 253)',
+                    'rgba(255, 213, 128)',
+                    'rgba(230, 230, 250)',
+                    'rgba(196, 164, 132)',
+                    'rgba(72, 113, 247)'
+                ],
+                borderColor: [
+                    'rgba(205, 209, 228)',
+                    'rgba(249, 180, 45)',
+                    'rgba(213, 184, 255)',
+                    'rgba(205,133,63)',
+                    'rgba(45, 85, 255)'
+                ],
+                borderWidth: 5
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            indexAxis: 'y'
+        }
+    });
+</script>
+
+
+</body>
+</html>
